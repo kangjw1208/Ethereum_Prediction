@@ -21,3 +21,12 @@ Bitcoin and Ethereum are the two most widely traded crypto assets. Both assets m
 ## Result
 
 ## Conclusion
+
+## Repository Structure
+```
+├── [data]
+├── [images]
+├── .gitignore
+├── README.md
+└── notebook.ipynb
+```
