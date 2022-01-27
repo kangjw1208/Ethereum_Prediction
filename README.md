@@ -14,7 +14,11 @@ Bitcoin and Ethereum are the two most widely traded crypto assets. Both assets m
 * Use other deep learning algorithm to predict future prices
 * Analyze the results
 
-## Data Preparation
+## Data Cleaning
+Ethereum data from the Binance trading platform has been obtained through the third party cryptocurrency database. The raw csv files have all its data as an object form. Therefore the time of each row had to be transformed into a date time object and all the prices had to be transformed into a float type. To achieve this, I have written two functions that takes in the dataframe and returns the desired dataframe suitable for time series analysis. Although the database had several features including the highs, lows, and volumes of Ethereum trade, only the closing price was considered for this analysis. 
+
+## Data Exploration
+I used the returned dataframe to run decomposition analysis to identity its trend and seasonality. Then I transformed the data to remove those trends to get a stationary data. I used the Augmented Dickey-Fuller test to make sure that the data was stationary. Finally I used Auto Correlation and Partial Auto Correlation to interpret the order of Autoregressive(AR) and Moving Average(MA).
 
 ## Model
 
