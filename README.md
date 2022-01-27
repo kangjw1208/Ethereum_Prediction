@@ -15,3 +15,9 @@ Bitcoin and Ethereum are the two most widely traded crypto assets. Both assets m
 * Analyze the results
 
 ## Data Preparation
+
+## Model
+
+## Result
+
+## Conclusion
