@@ -22,7 +22,8 @@ I used the returned dataframe to run decomposition analysis to identity its tren
 
 ## Model
 ### ARIMA
-The baseline model I used was the ARIMA model. I used both daily data and weekly data to forecast prices.
+The baseline model I used was the ARIMA model. I used both daily data and weekly data to forecast prices. In the ARIMA model, Auto regressive(AR) components are explained by the ACF while moving average(MA) is explained by PACF. The first order differential or integrated component(I) just indicates that the model was run on difference of the price which makes sense by looking at the stationary graph. The graph became stationary only after it was differenced with shift of 1.
+
 Daily ARIMA model with order of (2, 1, 3)
 
 ![download](https://user-images.githubusercontent.com/92397140/151518692-ef775115-ba0a-44de-aad7-2fa882b8d85e.png)
