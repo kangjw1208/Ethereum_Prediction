@@ -21,7 +21,7 @@ Ethereum data from the Binance trading platform has been obtained through the th
 I used the returned dataframe to run decomposition analysis to identity its trend and seasonality. Then I transformed the data to remove those trends to get a stationary data. I used the Augmented Dickey-Fuller test to make sure that the data was stationary. Finally I used Auto Correlation and Partial Auto Correlation to interpret the order of Autoregressive(AR) and Moving Average(MA).
 
 ## Model
-**ARIMA**
+###ARIMA
 The baseline model I used was the ARIMA model. I used both daily data and weekly data to forecast prices.
 Daily ARIMA model with order of (2, 1, 3)
 
@@ -33,7 +33,7 @@ Weekly ARIMA model with order of (3, 1, 3)
 
 At a quick glance this model seems to perform extremely well on both daily and weekly data with a small error. However, when we take a closer look at the results, we can see that this model is only mirroring past Ether prices. As you can see in the graph, a drastic increase or decrease in the price is predicted only after it has already happened.
 
-**LSTM**
+###LSTM
 To combat the simplicity of the traditional time series model, Long Short Term Memory (LSTM) network, a type of recurrent neural network, was used. This modeling technique was chosen because it is currently one of the most sophisticated models that can handle sequential data. To briefly explain the benefit of this architecture, LSTM neuron takes information from previous cells and combines it with newly input datas. It then quickly determines how much of the combined information is worth “retaining” or “forgetting”. This constant adjustment of weights produces a deep learning model that could potentially identify the underlying random patterns.
 ![image](https://user-images.githubusercontent.com/92397140/151519371-865f1381-1fae-4b5b-9f33-37b56c7b5ae3.png)
 This LSTM model was trained through 3 hidden layers. 2 of them includes the acutal LSTM cells with decreaing number of neurons. One of the layer consists of the dropout layer in order to regulate the model controlling the possibility of overfit. The best performing lstm model had a both epoch size and batch size of 100.
