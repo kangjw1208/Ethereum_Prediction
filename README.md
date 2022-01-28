@@ -24,9 +24,11 @@ I used the returned dataframe to run decomposition analysis to identity its tren
 **ARIMA**
 The baseline model I used was the ARIMA model. I used both daily data and weekly data to forecast prices.
 Daily ARIMA model with order of (2, 1, 3)
+
 ![download](https://user-images.githubusercontent.com/92397140/151518692-ef775115-ba0a-44de-aad7-2fa882b8d85e.png)
 
 Weekly ARIMA model with order of (3, 1, 3)
+
 ![download (1)](https://user-images.githubusercontent.com/92397140/151518780-af745e11-9f48-40ff-ae70-95de6c20a2ab.png)
 
 At a quick glance this model seems to perform extremely well on both daily and weekly data with a small error. However, when we take a closer look at the results, we can see that this model is only mirroring past Ether prices. As you can see in the graph, a drastic increase or decrease in the price is predicted only after it has already happened.
